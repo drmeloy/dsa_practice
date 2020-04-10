@@ -13,3 +13,6 @@ Tries
     - Output: 3
     - Input: str = [ “gee”, “geek”, “geezer”, “geeksforgeeks”, “geekiness”, “geekgod” ], pre = “geek”
     - Output: 4
+
+4.1: Route Between Nodes
+  - Given a directed graph, design an algorithm to find out whether there is a route between two nodes
