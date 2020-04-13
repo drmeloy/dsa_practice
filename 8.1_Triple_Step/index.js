@@ -28,11 +28,38 @@ const countWays = n => {
       else if(stepsAfterHop === n){
         count++;
       }
+
+      // FOR LOOP IMPLEMENTATION
+      // for(let i = 1; i <= Math.min(3, n - stepsTaken); ++i) {
+      //   let stepsAfterHop = stepsTaken;
+      //   stepsAfterHop += i;
+      //   if(stepsAfterHop < n){
+      //     takeOneHop(stepsAfterHop)
+      //   }
+      //   else if(stepsAfterHop === n){
+      //     count++;
+      //   }
+      // }
     })
   }
-  
+
   takeOneHop(0);
   return count;
 }
 
 countWays(4);
+
+// Second way to recursively solve
+const countWaysTakeTwo = n => {
+  if (n < 0){
+    return 0;
+  }
+  else if (n === 0) {
+    return 1;
+  }
+  else {
+    return countWaysTakeTwo(n - 1) + countWaysTakeTwo(n - 2) + countWaysTakeTwo(n - 3);
+  }
+}
+
+countWaysTakeTwo(4);
