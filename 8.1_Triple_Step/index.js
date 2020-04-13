@@ -92,3 +92,5 @@ const countWaysTakeFour = (n,  memo4 = { 0: 1 }) => {
 };
 
 console.log('take4: ', countWaysTakeFour(5));
+
+const countWaysTakeFive = (n, memo5 = { 0: 1 }) => n < 0 ? 0 : memo5[n] ? memo5[n] : memo5[n] = countWaysTakeFour(n - 1, memo5) +  countWaysTakeFour(n - 2, memo5) + countWaysTakeFour(n - 3, memo5);
