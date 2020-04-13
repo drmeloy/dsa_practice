@@ -16,3 +16,10 @@ Tries
 
 4.1: Route Between Nodes
   - Given a directed graph, design an algorithm to find out whether there is a route between two nodes
+
+8.1: Triple Step
+  - A child is running up a staircase with n steps and can hop either 1 step, 2 steps, or 3 steps at a time. Implement a method to count how many possible ways the child can run up the stairs.
+  - Example:
+    - for n = 2, there are 2 unique ways to run up the stairs: [1, 1] or [2]
+    - for n = 3, there are 4 unique ways:  [1, 1, 1], [1, 2], [2, 1], or [3]
+    - for n = 4, there are 7 unique ways: [1, 1, 1, 1], [1, 1, 2], [1, 2, 1], [2, 1, 1], [2, 2], [1, 3], [3, 1]
