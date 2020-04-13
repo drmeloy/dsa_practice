@@ -14,11 +14,14 @@
 const countWays = n => {
   const stepSizes = [1, 2, 3];
   let count = 0;
+
   if(n < 1) return;
+
   const takeOneHop = stepsTaken => {
     stepSizes.forEach(step => {
       let stepsAfterHop = stepsTaken;
       stepsAfterHop += step;
+
       if(stepsAfterHop < n){
         takeOneHop(stepsAfterHop)
       }
@@ -27,6 +30,7 @@ const countWays = n => {
       }
     })
   }
+  
   takeOneHop(0);
   return count;
 }
