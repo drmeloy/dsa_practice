@@ -63,3 +63,32 @@ const countWaysTakeTwo = n => {
 }
 
 countWaysTakeTwo(4);
+
+// With memoization!
+const memo = {};
+
+const countWaysTakeTwo = n => {
+  if (n < 0){
+    return 0;
+  }
+  else if (n === 0) {
+    return 1;
+  }
+  else if (memo[n]) {
+    return memo[n];
+  }
+  else {
+    memo[n] = countWaysTakeTwo(n - 1) + countWaysTakeTwo(n - 2) + countWaysTakeTwo(n - 3);
+    return memo[n];
+  }
+}
+
+countWaysTakeTwo(4);
+
+
+const countWaysTakeFour = (n,  memo4 = { 0: 1 }) => {
+  if (n < 0) return 0;
+  return memo4[n] ? memo4[n] : memo4[n] = countWaysTakeFour(n - 1, memo4) + countWaysTakeFour(n - 2, memo4) + countWaysTakeFour(n - 3, memo4);
+};
+
+console.log('take4: ', countWaysTakeFour(5));
