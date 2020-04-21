@@ -23,3 +23,20 @@ Tries
     - for n = 2, there are 2 unique ways to run up the stairs: [1, 1] or [2]
     - for n = 3, there are 4 unique ways:  [1, 1, 1], [1, 2], [2, 1], or [3]
     - for n = 4, there are 7 unique ways: [1, 1, 1, 1], [1, 1, 2], [1, 2, 1], [2, 1, 1], [2, 2], [1, 3], [3, 1]
+
+String Permutations
+  - 1.4 Palindrome Permutation
+    - Given a string, write a function to check if it is a permutation of a palindrome.  The palindrome does not need to be limited to just dictionary words.
+
+    - Input: Tact coa
+    - Output: True
+    - Input: Cat
+    - Output: False
+
+  - 1.5 One Away
+    - There are three types of edits that can be performed on strings: insert a character, remomve a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
+
+    - pale, ple -> true
+    - pales, pale -> true
+    - pale, bale -> true
+    - pale, bake ->  false
