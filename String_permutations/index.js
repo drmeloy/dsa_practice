@@ -31,7 +31,7 @@ isPalindromePermutation('taco cat');
 
 const isOneAway = (word1, word2) => {
   if(Math.abs(word1.length - word2.length) >= 2) return false;
-  const checkFirst = word1.length > word2.length ? word2 : word1;
+  const checkFirst = word1.length > word2.length ? word1 : word2;
   const checkSecond = checkFirst === word1 ? word2 : word1;
   const hash = {}
   for(let letter of checkFirst){
