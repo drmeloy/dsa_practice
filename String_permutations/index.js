@@ -51,3 +51,31 @@ const isOneAway = (word1, word2) => {
 }
 
 isOneAway("pale", "PALE")
+
+const isOneAwayForLoopsEdition = (word1, word2) => {
+  if(Math.abs(word1.length - word2.length) >= 2) return false;
+  const arguments = [word1, word2];
+  [...arguments].sort((a, b) => b.length - a.length)
+  const checkFirst = arguments[0];
+  const checkSecond = arguments[1];
+  let differences = 0;
+
+  if(checkFirst.length === checkSecond.length)
+  for(let i = 0; i < checkFirst.length; ++i){
+    if(checkFirst[i] === checkSecond[i]) continue;
+    ++differences;
+  }
+
+  else {
+    for(let i = 0, j = 0; i < checkFirst.length; ++i, ++j){
+      console.log(i, j, differences)
+        if(checkFirst[i] === checkSecond[j]) continue;
+        ++i, ++differences;
+    }
+  }
+  
+  if(differences > 1) return false;
+  return true;
+}
+
+isOneAwayForLoopsEdition("palrp", "palrpp");
