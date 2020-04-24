@@ -40,3 +40,10 @@ Tries
     - pales, pale -> true
     - pale, bale -> true
     - pale, bake ->  false
+
+2.3 and 3.5 Delete Middle Node and Sort Stack
+  - 2.3 Delete the middle node
+    - Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+
+  - 3.5 Sort Stack
+    - Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: push, pop, peek, and isEmpty.
