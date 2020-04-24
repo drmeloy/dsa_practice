@@ -24,7 +24,7 @@ Tries
     - for n = 3, there are 4 unique ways:  [1, 1, 1], [1, 2], [2, 1], or [3]
     - for n = 4, there are 7 unique ways: [1, 1, 1, 1], [1, 1, 2], [1, 2, 1], [2, 1, 1], [2, 2], [1, 3], [3, 1]
 
-String Permutations
+1.4 and 1.5: String Permutations
   - 1.4 Palindrome Permutation
     - Given a string, write a function to check if it is a permutation of a palindrome.  The palindrome does not need to be limited to just dictionary words.
 
