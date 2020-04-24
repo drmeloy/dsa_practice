@@ -27,24 +27,23 @@ class LinkedList {
   }
 
   deleteMiddleNode(node){
-    let current = node;
-    while(current.next) {
-      current.value = current.next.value;
-      if(!current.next.next) current.next = null;
-      else current = current.next;
-    }
+    if (node === null || node.next === null) throw new Error('Please provide a node. Node cannot be last in the Linked List');
+    node.value = node.next.value;
+    node.next = node.next.next;
   }
 }
 
 const list = new LinkedList();
-const node = new Node(3);
-list.add(node);
-list.add(new Node(5));
 const middleNode = new Node(10);
+list.add(new Node(3));
+list.add(new Node(5));
 list.add(middleNode);
 list.add(new Node(4));
 list.add(new Node(6));
+const lastNode = new Node(100);
+list.add(lastNode);
 
 console.log(list.toString());
 list.deleteMiddleNode(middleNode);
 console.log(list.toString());
+list.deleteMiddleNode(lastNode);
