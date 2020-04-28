@@ -5,20 +5,19 @@
 
 //[{a}, {b}, {a, b}, {a, c}, {b, c}, {a, b, c}, {c}, {a, d}, {b, d}, {a, b, d}, {c, d}, {a, c, d}, {b, c, d}, {a, b, c, d}, {d}]
 
-
-
 addNewSubsetsToRunningSubsets = (runningSubsets, value) => {
-  const copyOfRunningSubsets = new Set(runningSubsets);
-  copyOfRunningSubsets.forEach(subset => {
+  const newSubsets = new Set();
+  runningSubsets.forEach(subset => {
     const newAddition = new Set(subset);
     newAddition.add(value);
-    runningSubsets.add(newAddition);
+    newSubsets.add(newAddition);
   });
-  runningSubsets.add((new Set()).add(value));
+  newSubsets.forEach(subset => runningSubsets.add(subset));
 }
 
 const subsetInator = set => {
   const runningSubset = new Set();
+  runningSubset.add(new Set());
   set.forEach(element => {
     addNewSubsetsToRunningSubsets(runningSubset, element);
   });
